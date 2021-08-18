@@ -43,4 +43,4 @@ https://user-images.githubusercontent.com/72103178/129638001-5dda39d8-910a-4450-
 
 ## Disclaimer
 
-This is for educational purposes only - use at your own discretion. As botting is against Nexon's EULA, I will not be responsible for any suspensions to your account.
+This bot was made and intended for educational purposes only - use at your own discretion. Botting is against Nexon's EULA and will lead to suspensions against your account.
