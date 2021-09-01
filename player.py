@@ -7,15 +7,28 @@ SC_DECIMAL_ARROW = {
 }
 
 SC_DECIMAL = {
-    "ALT": 56, "SPACE": 57, "CTRL": 29, "SHIFT": 42,
-    "A": 30, "S": 31, "D": 32, "F": 33,
-    "Q": 16, "W": 17, "E": 18, "R": 19,
-    "1": 2, "2": 3, "3": 4, "4": 5
+
+"ESC": 1, "1": 2, "2": 3, "3": 4, "4": 5, "5": 6, "6": 7, "7": 8, "8": 9, "9": 10, "0": 11, 
+"-": 12, "=": 13, "bs": 14, "Tab": 15, "Q": 16, "W": 17, "E": 18, "R": 19, "T": 20, "Y": 21, 
+"U": 22, "I": 23, "O": 24, "P": 25, "[": 26, "]": 27, "Enter": 28, "CTRL": 29, "A": 30, "S": 31, 
+"D": 32, "F": 33, "G": 34, "H": 35, "J": 36, "K": 37, "L": 38, ";": 39, "'": 40, "`": 41, 
+"LShift": 42, "\\": 43, "Z": 44, "X": 45, "C": 46, "V": 47, "B": 48, "N": 49, "M": 50, 
+",": 51, ".": 52, "/": 53, "RShift": 54, "PrtSc": 55, "Alt": 56, "Space": 57, "Caps": 58,
+"F1": 59, "F2": 60, "F3": 61, "F4": 62, "F5": 63, "F6": 64, "F7": 65, "F8": 66, "F9": 67,
+"F10": 68, "Num": 69, "Scroll": 70, "Home": 71, "Up": 72, "PgUp": 73, "-": 74, "Left": 75,
+"Center": 76, "Right": 77, "+": 78, "End": 79, "Down": 80, "PgDn": 81, "Ins": 82, "Del": 83 
+
+# original scan code
+    # "ALT": 56, "SPACE": 57, "CTRL": 29, "SHIFT": 42,
+    # "A": 30, "S": 31, "D": 32, "F": 33,
+    # "Q": 16, "W": 17, "E": 18, "R": 19,
+    # "1": 2, "2": 3, "3": 4, "4": 5
 }
+
 
 # Change these to your own settings.
 JUMP_KEY = "ALT"
-ROPE_LIFT_KEY = "D"
+ROPE_LIFT_KEY = "SHIFT"
 
 
 class Player:
@@ -89,8 +102,10 @@ class Player:
                     if y1 - y2 > 30:
                         self.press(ROPE_LIFT_KEY)
                     else:
-                        self.press("UP")
-                        self.press("UP")
+                        self.press(ROPE_LIFT_KEY)  # small climb movement in most maps is not viable
+                                                    # can always rope lift up and then jump down
+                        # self.press("UP")
+                        # self.press("UP")
                 # Delay for player falling down or jumping up.
                 time.sleep(1)
             else:

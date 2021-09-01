@@ -71,6 +71,18 @@ if __name__ == "__main__":
         if other_location > 0:
             print("A player has entered your map.")
 
+            ####### need to work on this  ##### auto changing map when ppl enter
+            print("Changing channel now.")
+            time.sleep(3)
+            p.press("ESC")
+            time.sleep(0.5)
+            p.press("ENTER")
+            time.sleep(0.5)
+            p.press("RIGHT")
+            time.sleep(0.5)
+            p.press("ENTER")
+
+
         rune_location = g.get_rune_location()
         if rune_location is not None:
             print("A rune has appeared.")

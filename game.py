@@ -1,5 +1,6 @@
 import gdi_capture
 import numpy as np
+import sys
 
 # These are colors taken from the mini-map in BGRA format.
 PLAYER_BGRA = (68, 221, 255, 255)
@@ -22,6 +23,7 @@ class Game:
         with gdi_capture.CaptureWindow(self.hwnd) as img:
             if img is None:
                 print("MapleStory.exe was not found.")
+                sys.exit()    # instead of looping the warning, just show once and exit the program
                 return None
             return img.copy()
 
@@ -33,6 +35,7 @@ class Game:
             locations = []
             if img is None:
                 print("MapleStory.exe was not found.")
+                sys.exit()    # instead of looping the warning, just show once and exit the program
             else:
                 """
                 The screenshot of the application window is returned as a 3-d np.ndarray, 
