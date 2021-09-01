@@ -117,7 +117,7 @@ if __name__ == "__main__":
 
         print("Running...")
 
-        p.go_to(target_left)
+    
 
 # buff
 
@@ -214,7 +214,7 @@ if __name__ == "__main__":
         p.press("D")
         time.sleep(0.8)
 
-        p.go_to(target_left)
+  
 
 ########### insert other player check here
 
@@ -330,5 +330,5 @@ if __name__ == "__main__":
         p.press("D")
         time.sleep(0.8)
 
-        p.go_to(target_left)
+     
 
