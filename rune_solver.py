@@ -73,7 +73,7 @@ def find_arrow_directions(img, debug=False):
 
     def expand_gradient(r1, c1, direction):
         """
-        Given a starting pixel and gradient direction, we can BFS to expand the gradient.
+        Given a starting pixel and gradient direction, we can DFS to expand the gradient.
         Arrow(s) had horizontal hue changes of 10 and vertical hue changes of 2.
         """
         stack = [(r1, c1)]
