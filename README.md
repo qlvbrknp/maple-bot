@@ -22,7 +22,7 @@ The approach taken to tackle this problem is heavily reliant on similar image-pr
 ### Approach
 Screenshots are returned as a numpy.ndarray, containing BGRA values of each pixel. The color space of the image is converted from BGRA to HSV and is split into its respective channels. Search within the area that the captcha will appear for any red-ish colors, this will serve as the starting point for any potential arrows. From every starting point, search every direction for a green-ish color. If there is a valid gradient, a potential arrow has been found, and any nearby red-ish colors can be eliminated from the search space. This process is repeated until the image is fully searched. 
 
-To create an image of the entire arrow, a BFS can be applied to expand the gradient outwards.
+To create an image of the entire arrow, a DFS can be applied to expand the gradient outwards.
 
 ![Screenshot](docs/process.png)
 
