@@ -4,9 +4,7 @@ from rune_solver import find_arrow_directions
 from interception import *
 from game import Game
 from player import Player
-from pynput.mouse import Button, Controller
 
-mouse = Controller()
 
 
 def bind(context):
@@ -19,7 +17,7 @@ def bind(context):
             print(f"Bound to keyboard: {context.get_HWID(device)}.")
             c.set_filter(interception.is_keyboard, 0)
             break
-    return device
+    return device 
 
 def solve_rune(g, p, target):
     """
@@ -81,35 +79,17 @@ if __name__ == "__main__":
             # so far works fine, might need to improve
             print("Changing channel now.")
             time.sleep(4)
-            p.press("ESC")
-            time.sleep(0.5)
-            p.press("ENTER")
-            time.sleep(0.5)
-            p.press("RIGHT")
-            time.sleep(0.5)
-            p.press("UP")
-            time.sleep(0.5)
-            p.press("ENTER")
 
-            p.press("ESC")
-            time.sleep(0.5)
-            p.press("ENTER")
-            time.sleep(0.5)
-            p.press("RIGHT")
-            time.sleep(0.5)
-            p.press("UP")
-            time.sleep(0.5)
-            p.press("ENTER")
-
-            p.press("ESC")
-            time.sleep(0.5)
-            p.press("ENTER")
-            time.sleep(0.5)
-            p.press("RIGHT")
-            time.sleep(0.5)
-            p.press("DOWN")
-            time.sleep(0.5)
-            p.press("ENTER")
+            for i in range(3):
+                p.press("ESC")
+                time.sleep(0.5)
+                p.press("ENTER")
+                time.sleep(0.5)
+                p.press("RIGHT")
+                time.sleep(0.5)
+                p.press("UP")
+                time.sleep(0.5)
+                p.press("ENTER")
 
 
         rune_location = g.get_rune_location()
@@ -121,13 +101,6 @@ if __name__ == "__main__":
         print("Running...")
 
         p.go_to(target_left)
-
-
-# mimic mouse move
-        for i in range(5):
-            mouse.move(2, -2)   # it just set a meaningless 1 and loop 5 times
-        for i in range(5):
-            mouse.move(-2, 2)
 
 
 # buff
@@ -159,29 +132,14 @@ if __name__ == "__main__":
         p.press("LEFT")
         time.sleep(0.3)
 
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
 
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
+        for i in range(4): 
+            p.press("SPACE")
+            p.press("SPACE")
+            time.sleep(0.1)
+            p.press("D")
+            time.sleep(0.8)
 
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
-
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
 
         p.press("RIGHT")
         time.sleep(0.3)
@@ -207,23 +165,12 @@ if __name__ == "__main__":
         p.press("W") # arachid reflection
         time.sleep(1)
 
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
-
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
-
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
+        for i in range(3): 
+            p.press("SPACE")
+            p.press("SPACE")
+            time.sleep(0.1)
+            p.press("D")
+            time.sleep(0.8)
 
         p.go_to(target_left)
 
@@ -237,36 +184,17 @@ if __name__ == "__main__":
             # so far works fine, might need to improve
             print("Changing channel now.")
             time.sleep(4)
-            p.press("ESC")
-            time.sleep(0.5)
-            p.press("ENTER")
-            time.sleep(0.5)
-            p.press("RIGHT")
-            time.sleep(0.5)
-            p.press("UP")
-            time.sleep(0.5)
-            p.press("ENTER")
 
-            p.press("ESC")
-            time.sleep(0.5)
-            p.press("ENTER")
-            time.sleep(0.5)
-            p.press("RIGHT")
-            time.sleep(0.5)
-            p.press("UP")
-            time.sleep(0.5)
-            p.press("ENTER")
-
-            p.press("ESC")
-            time.sleep(0.5)
-            p.press("ENTER")
-            time.sleep(0.5)
-            p.press("RIGHT")
-            time.sleep(0.5)
-            p.press("DOWN")
-            time.sleep(0.5)
-            p.press("ENTER")
-
+            for i in range(3):
+                p.press("ESC")
+                time.sleep(0.5)
+                p.press("ENTER")
+                time.sleep(0.5)
+                p.press("RIGHT")
+                time.sleep(0.5)
+                p.press("UP")
+                time.sleep(0.5)
+                p.press("ENTER")
 
 
 ##########
@@ -277,23 +205,13 @@ if __name__ == "__main__":
         time.sleep(0.3)
 
 
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
+        for i in range(3):
+            p.press("SPACE")
+            p.press("SPACE")
+            time.sleep(0.1)
+            p.press("D")
+            time.sleep(0.8)
 
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
-
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
 
         p.press("RIGHT")
         time.sleep(0.3)
@@ -329,17 +247,13 @@ if __name__ == "__main__":
         p.press("B") #  rush to edge
         time.sleep(1)
 
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
+        for i in range(2):
 
-        p.press("SPACE")
-        p.press("SPACE")
-        time.sleep(0.1)
-        p.press("D")
-        time.sleep(0.8)
+            p.press("SPACE")
+            p.press("SPACE")
+            time.sleep(0.1)
+            p.press("D")
+            time.sleep(0.8)
 
         p.go_to(target_left)
 
