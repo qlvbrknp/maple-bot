@@ -4,6 +4,9 @@ from rune_solver import find_arrow_directions
 from interception import *
 from game import Game
 from player import Player
+from pynput.mouse import Button, Controller
+
+mouse = Controller()
 
 
 def bind(context):
@@ -118,6 +121,14 @@ if __name__ == "__main__":
         print("Running...")
 
         p.go_to(target_left)
+
+
+# mimic mouse move
+        for i in range(5):
+            mouse.move(2, -2)   # it just set a meaningless 1 and loop 5 times
+        for i in range(5):
+            mouse.move(-2, 2)
+
 
 # buff
 
