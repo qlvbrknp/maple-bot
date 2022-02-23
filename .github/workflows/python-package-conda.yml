@@ -32,4 +32,3 @@ jobs:
       run: |
         conda install pytest
         pytest
-        $configureString = "./configure --prefix=$pythonBinariesLocation --enable-shared --enable-optimizations"
